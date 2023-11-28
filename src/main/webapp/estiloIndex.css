@@ -1,0 +1,39 @@
+body {
+    /* Establece la imagen de fondo y ajusta el estilo según sea necesario */
+    background-image: url('menu.jpg');
+    background-size: cover; /* Puedes ajustar esto según tus necesidades */
+    background-repeat: no-repeat;
+    /* Agrega más estilos según sea necesario */
+    text-align: center;
+    padding: 20px;
+    color: #fff; /* Color del texto en blanco para resaltar en el fondo claro */
+}
+
+h1, h2 {
+    /* Estilos para los títulos */
+    text-align: center;
+    color: #000; /* Color del texto en negro */
+    font-size: 4em; /* Tamaño de la fuente mucho más grande (ajusta según tus necesidades) */
+}
+
+form {
+    /* Estilos para el formulario */
+    display: inline-block; /* Para que los botones estén uno sobre otro */
+    margin-top: 20px; /* Espaciado superior para separar los títulos de los botones */
+}
+
+button {
+    /* Estilos para los botones */
+    font-weight: bold; /* Fuente en negrita */
+    background-color: #fff; /* Fondo blanco */
+    border: 2px solid #333; /* Borde llamativo de color oscuro */
+    padding: 10px 20px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espaciado inferior entre los botones */
+    cursor: pointer;
+}
+
+button:hover {
+    /* Estilos cuando se pasa el mouse sobre los botones */
+    background-color: #333; /* Cambia el fondo a color oscuro */
+    color: #fff; /* Cambia el color del texto a blanco */
+}

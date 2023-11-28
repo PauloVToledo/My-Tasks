@@ -10,23 +10,31 @@
 <body>
 <h1>Eliminar Tarea</h1>
 
-<!-- Formulario para seleccionar la tarea a eliminar -->
-<form action="ServletTarea" method="post">
-    <label for="idTarea">Selecciona la Tarea a Eliminar:</label>
-    <select id="idTarea" name="idTarea" required>
-        <!-- Aquí puedes cargar dinámicamente las tareas existentes desde tu base de datos o sistema de almacenamiento -->
-        <option value="1">Tarea 1</option>
-        <option value="2">Tarea 2</option>
-        <option value="3">Tarea 3</option>
-        <!-- Agrega más opciones según sea necesario -->
-    </select>
+<!-- Lista de tareas con botones de eliminación -->
+<ul>
+    <li>
+        <span>Nombre de la Tarea 1</span>
+        <button onclick="eliminarTarea('id_tarea_1')">Eliminar</button>
+    </li>
+    <li>
+        <span>Nombre de la Tarea 2</span>
+        <button onclick="eliminarTarea('id_tarea_2')">Eliminar</button>
+    </li>
+    <!-- Agrega más elementos de la lista según sea necesario -->
+</ul>
 
-    <br>
-
-    <button type="submit">Eliminar Tarea</button>
-</form>
+<script>
+    function eliminarTarea(idTarea) {
+        // Aquí puedes implementar la lógica para eliminar la tarea con el idTarea
+        // Puedes hacer una llamada AJAX al servidor para manejar la eliminación
+        // Por ahora, solo mostramos un mensaje de alerta
+        alert('Tarea con ID ' + idTarea + ' eliminada.');
+    }
+</script>
 
 <br>
+
 <a href="index.jsp">Volver a la Página Principal</a>
+
 </body>
 </html>
