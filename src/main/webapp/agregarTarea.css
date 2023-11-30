@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px; /* Agrega espacio debajo del título */
+}
+
+form {
+    text-align: center;
+    margin-top: 20px; /* Agrega espacio encima del formulario */
+}
+
+/* Puedes ajustar estos estilos según tus preferencias */
+label {
+    margin-right: 10px; /* Ajusta el espacio entre las etiquetas y los campos de entrada */
+}
+
+/* Agrega más estilos según sea necesario */
