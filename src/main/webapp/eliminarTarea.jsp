@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Eliminar Tarea</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="eliminarTarea.css">
     <!-- Puedes agregar enlaces a archivos CSS u otros recursos aquí -->
 </head>
 <body>
@@ -25,9 +25,6 @@
 
 <script>
     function eliminarTarea(idTarea) {
-        // Aquí puedes implementar la lógica para eliminar la tarea con el idTarea
-        // Puedes hacer una llamada AJAX al servidor para manejar la eliminación
-        // Por ahora, solo mostramos un mensaje de alerta
         alert('Tarea con ID ' + idTarea + ' eliminada.');
     }
 </script>

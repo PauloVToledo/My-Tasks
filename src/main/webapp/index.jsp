@@ -8,14 +8,11 @@
 
     <style>
         body {
-            /* Establece la imagen de fondo y ajusta el estilo según sea necesario */
             background-image: url('menu.jpg');
-            background-size: cover; /* Puedes ajustar esto según tus necesidades */
+            background-size: cover;
             background-repeat: no-repeat;
-            /* Agrega más estilos según sea necesario */
         }
 
-        /* Puedes agregar más estilos CSS según tus necesidades */
     </style>
 </head>
 <body>
