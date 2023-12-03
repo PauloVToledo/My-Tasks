@@ -16,8 +16,8 @@
     </style>
 </head>
 <body>
-<h1>Bienvenido a My Tasks</h1>
-<h2>Tareas Dinámicas</h2>
+<h1>My</h1><h2>Tasks</h2>
+<h3>Tareas Dinámicas</h3>
 
 <form action="ServletControlador" method="post">
     <button type="submit" name="action" value="verCalendario">Ver mi Calendario</button>
