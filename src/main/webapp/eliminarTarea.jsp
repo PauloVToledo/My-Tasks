@@ -8,7 +8,16 @@
     <!-- Puedes agregar enlaces a archivos CSS u otros recursos aquí -->
 </head>
 <body>
-<h1>Eliminar Tarea</h1>
+
+
+<style>
+    h1,h2{
+        display: inline-block;
+        margin-right: 10px;
+    }
+</style>
+
+<h1>Eliminar</h1><h2>Tarea</h2>
 
 <!-- Lista de tareas con botones de eliminación -->
 <ul>

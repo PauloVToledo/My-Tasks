@@ -8,7 +8,15 @@
 </head>
 <body>
 
-<h1>Agregar Tarea</h1>
+
+<style>
+    h1,h2{
+        display: inline-block;
+        margin-right: 10px;
+    }
+</style>
+
+<h1>Agregar</h1><h2>Tarea</h2>
 
 <!-- Formulario para agregar una nueva tarea -->
 <form action="ServletTarea" method="post">

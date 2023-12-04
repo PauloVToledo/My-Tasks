@@ -1,13 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: beige; /* Cambié el color de fondo a beige */
+    background-color: beige;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 
-h1 {
+h1, h2 {
+    /* Estilos para los títulos */
     text-align: center;
-    color: #333;
+    font-size: 4em; /* Tamaño de la fuente mucho más grande (ajusta según tus necesidades) */
+}
+
+h1{
+    color: blue; /* Color azul para h1 */
+}
+
+h2 {
+    color: green; /* Color verde para h2 */
 }
 
 ul {
@@ -26,10 +35,10 @@ li {
     align-items: center;
 }
 
-/* Establece un ancho fijo para todos los cuadros de texto */
 input[type="text"] {
     flex: 1;
-    margin-right: 10px; /* Añade un margen derecho para separar los cuadros de texto */
+    margin-right: 10px;
+    max-width: 200px;
 }
 
 button {
@@ -39,13 +48,16 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    /* Center the button horizontally */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 button:hover {
     background-color: #c82333;
 }
 
-/* Estilos para el texto más abajo */
 a {
     display: block;
     text-align: center;
