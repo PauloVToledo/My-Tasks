@@ -28,9 +28,6 @@
         alert('Tarea con ID ' + idTarea + ' eliminada.');
     }
 </script>
-
-<br>
-
 <a href="index.jsp">Volver a la Página Principal</a>
 
 </body>

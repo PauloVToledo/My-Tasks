@@ -12,9 +12,12 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
-
+        h1,h2{
+            display: inline-block;
+        }
     </style>
 </head>
+
 <body>
 <h1>My</h1><h2>Tasks</h2>
 <h3>Tareas Dinámicas</h3>

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: beige; /* Cambié el color de fondo a beige */
     margin: 0;
     padding: 0;
 }
@@ -23,11 +23,13 @@ li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
 }
 
-span {
+/* Establece un ancho fijo para todos los cuadros de texto */
+input[type="text"] {
     flex: 1;
+    margin-right: 10px; /* Añade un margen derecho para separar los cuadros de texto */
 }
 
 button {
@@ -43,7 +45,8 @@ button:hover {
     background-color: #c82333;
 }
 
-{
+/* Estilos para el texto más abajo */
+a {
     display: block;
     text-align: center;
     margin-top: 20px;

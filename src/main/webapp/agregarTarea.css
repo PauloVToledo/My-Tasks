@@ -1,12 +1,15 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: beige; /* Cambié el color de fondo a beige */
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 h1 {
     color: #333;
+    margin-top: 20px;
+    text-align: center;
 }
 
 form {
@@ -16,33 +19,32 @@ form {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Alinea el texto del formulario a la izquierda */
 }
 
+/* Agregué estilos para los cuadros de texto y JComboBox */
 label {
     display: block;
-    margin: 10px 0 5px;
-    color: #333;
+    margin-bottom: 5px;
 }
 
-input,
+input[type="text"],
 select {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 10px; /* Aumenté el margen inferior para mayor separación */
     box-sizing: border-box;
 }
 
 button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
     background-color: #4caf50;
     color: #fff;
-    padding: 10px 15px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
 }
 
 a {
@@ -50,6 +52,7 @@ a {
     margin-top: 20px;
     color: #007bff;
     text-decoration: none;
+    text-align: center;
 }
 
 a:hover {
