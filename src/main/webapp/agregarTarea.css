@@ -1,25 +1,57 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
+    padding: 0;
 }
 
 h1 {
     color: #333;
-    margin-bottom: 20px; /* Agrega espacio debajo del título */
 }
 
 form {
-    text-align: center;
-    margin-top: 20px; /* Agrega espacio encima del formulario */
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Puedes ajustar estos estilos según tus preferencias */
 label {
-    margin-right: 10px; /* Ajusta el espacio entre las etiquetas y los campos de entrada */
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
 }
 
-/* Agrega más estilos según sea necesario */
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

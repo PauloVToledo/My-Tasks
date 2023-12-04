@@ -9,11 +9,23 @@ body {
     color: #fff; /* Color del texto en blanco para resaltar en el fondo claro */
 }
 
-h1, h2 {
+h1 {
     /* Estilos para los títulos */
     text-align: center;
-    color: #000; /* Color del texto en negro */
+    color: blue; /* Color azul */
     font-size: 4em; /* Tamaño de la fuente mucho más grande (ajusta según tus necesidades) */
+}
+
+h2 {
+    text-align: center;
+    color: green;
+    font-size: 4em;
+}
+
+h3 {
+    text-align: center;
+    color: black;
+    font-size: 4em;
 }
 
 form {
