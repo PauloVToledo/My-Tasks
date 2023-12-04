@@ -1,6 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.my_tasks.modelo.Tarea" %>
+<%@ page import="org.jooq.DSLContext" %>
+<%@ page import="com.example.my_tasks.modelo.datos.DBGenerator" %>
+<%@ page import="com.example.my_tasks.modelo.datos.DAO.TareaDAO" %>
+<%@ page import="com.example.my_tasks.modelo.datos.DBConnector" %>
 <html>
 <head>
     <title>Tareas mes de enero</title>
@@ -42,9 +46,14 @@
     </thead>
     <tbody>
     <!-- Lógica para mostrar las tareas -->
-    <% if (request.getAttribute("tareasEnero") != null) {
-        List<Tarea> tareas = (List<Tarea>) request.getAttribute("tareasEnero");
-        for (Tarea tarea : tareas) { %>
+    <%
+        try {
+            DSLContext create = DBGenerator.conectarBD("TareasBD");
+            List<Tarea> tareas = TareaDAO.obtenerTareas(create);
+            DBConnector.closeConnection(); // Cerrar la conexión
+
+            if (tareas != null && !tareas.isEmpty()) {
+                for (Tarea tarea : tareas) { %>
     <tr>
         <td><%= tarea.getNombre() %></td>
         <td><%= tarea.getTipo() %></td>
@@ -55,12 +64,17 @@
         <td><%= tarea.getAño() %></td>
         <!-- Otros campos si es necesario -->
     </tr>
-    <%   }
+    <% }
     } else { %>
     <tr>
         <td colspan="7">No hay tareas para mostrar.</td>
     </tr>
-    <% } %>
+    <% }
+    } catch (Exception e) {
+        e.printStackTrace();
+        // Manejar errores
+    }
+    %>
     </tbody>
 </table>
 

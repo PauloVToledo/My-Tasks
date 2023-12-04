@@ -11,14 +11,14 @@
 <h1>Agregar Tarea</h1>
 
 <!-- Formulario para agregar una nueva tarea -->
-<form action="ServletTarea" method="post">
+<form action="agregarTarea" method="post">
     <label for="nombre">Nombre de la Tarea:</label>
     <input type="text" id="nombre" name="nombre" required>
 
     <br>
 
-    <label for="tipoTarea">Tipo de Tarea:</label>
-    <select id="tipoTarea" name="tipoTarea" required>
+    <label for="tipo">Tipo de Tarea:</label>
+    <select id="tipo" name="tipo" required>
         <option value="academica">Académica</option>
         <option value="recreativa">Recreativa</option>
         <option value="cotidiana">Cotidiana</option>
