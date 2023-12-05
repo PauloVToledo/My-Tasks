@@ -2,23 +2,31 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Mostrar libros</title>
+    <title>Mostrar tareas</title>
     <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
-<h1 class="encabezado">Libros ingresados</h1>
+<h1 class="encabezado">Tareas ingresadas</h1>
 <div class="centrado">
     <table>
         <tr>
             <th>Nombre </th>
-            <th>Categoria </th>
+            <th>Tipo </th>
+            <th>Descripcion </th>
+            <th>Hora </th>
+            <th>Dia </th>
+            <th>Mes </th>
             <th>Año </th>
         </tr>
-        <c:forEach items="${libros}" var="libro">
+        <c:forEach items="${tareas}" var="tarea">
             <tr>
-                <td><c:out value="${libro.getNombre()}"></c:out> </td>
-                <td> <c:out value="${libro.getCategoria()}"></c:out> </td>
-                <td> <c:out value="${libro.getAño()}"></c:out> </td>
+                <td><c:out value="${tarea.getNombre()}"></c:out> </td>
+                <td> <c:out value="${tarea.getTipo()}"></c:out> </td>
+                <td> <c:out value="${tarea.getDescripcion()}"></c:out> </td>
+                <td> <c:out value="${tarea.getHora()}"></c:out> </td>
+                <td> <c:out value="${tarea.getDia()}"></c:out> </td>
+                <td> <c:out value="${tarea.getMes()}"></c:out> </td>
+                <td> <c:out value="${tarea.getAño()}"></c:out> </td>
             </tr>
         </c:forEach>
     </table>

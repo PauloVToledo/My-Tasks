@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1 class="encabezado"> Registro libro</h1>
-<form action="registroLibro" method="post">
+<form action="registroTarea" method="post">
     <div class="centrado">
         <label> Nombre:</label>
         <input name="nombre" type="text" class="campoTexto">

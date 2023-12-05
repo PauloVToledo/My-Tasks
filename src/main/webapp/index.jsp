@@ -6,23 +6,23 @@
     <title>Menu</title>
 </head>
 <body>
-<h1 class="encabezado"> Menú principal libros </h1>
+<h1 class="encabezado"> Menú principal tareas </h1>
 <br>
-<form action="registroLibro" method="get">
+<form action="registroTarea" method="get">
     <div class="centrado">
-        <input type="submit" value="Registrar libro" class="boton">
+        <input type="submit" value="Registrar tarea" class="boton">
     </div>
 </form>
 <br>
-<form action="mostrarLibros" method="get">
+<form action="mostrarTareas" method="get">
     <div class="centrado">
-        <input type="submit" value="Mostrar libros" class="boton">
+        <input type="submit" value="Mostrar tareas" class="boton">
     </div>
 </form>
 <br>
-<form action="eliminarLibro" method="get">
+<form action="eliminarTarea" method="get">
     <div class="centrado">
-        <input type="submit" value="Eliminar libro" class="boton">
+        <input type="submit" value="Eliminar tarea" class="boton">
     </div>
 </form>
 </body>

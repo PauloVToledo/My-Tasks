@@ -3,22 +3,23 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="estilos.css">
-    <title>Eliminar libro</title>
+    <title>Eliminar tarea</title>
 </head>
 <body>
-<h1 class="encabezado"> Eliminar libro</h1>
+<h1 class="encabezado"> Eliminar tarea</h1>
 <div class="centrado">
     <p class="subtitulo">Eliminacion exitosa</p> <br>
-    <label class="campoTexto"> Nombre : <c:out value="${libro.getNombre()}"></c:out> </label>
+    <label class="campoTexto"> Nombre : <c:out value="${tarea.getNombre()}"></c:out> </label>
     <br>
-    <label class="campoTexto"> Editorial : <c:out value="${libro.getEditorial()}"></c:out></label>
+    <label class="campoTexto"> Tipo : <c:out value="${tarea.getTipo()}"></c:out></label>
     <br>
-    <label class="campoTexto"> Categoria : <c:out value="${libro.getCategoria()}"></c:out></label>
+    <label class="campoTexto"> Hora : <c:out value="${tarea.getHora()}"></c:out></label>
     <br>
-    <label class="campoTexto"> Año : <c:out value="${libro.getAño()}"></c:out></label>
+    <label class="campoTexto"> Dia : <c:out value="${tarea.getDia()}"></c:out></label>
     <br>
-    <label class="campoTexto"> Tipo : <c:out value="${libro.getTipo()}"></c:out></label>
+    <label class="campoTexto"> Mes : <c:out value="${tarea.getMes()}"></c:out></label>
     <br>
+    <label class="campoTexto"> Año : <c:out value="${tarea.getAño()}"></c:out></label>
     <a class="boton" href="index.jsp">Volver</a>
 </div>
 

@@ -1,8 +1,8 @@
-package com.gestion.gestionlibros.controller;
+package com.gestion.gestiontareas.controller;
 
-import com.gestion.gestionlibros.model.Tarea;
-import com.gestion.gestionlibros.model.data.DBGenerator;
-import com.gestion.gestionlibros.model.data.dao.TareaDAO;
+import com.gestion.gestiontareas.model.Tarea;
+import com.gestion.gestiontareas.model.data.DBGenerator;
+import com.gestion.gestiontareas.model.data.dao.TareaDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,8 +14,8 @@ import org.jooq.DSLContext;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "registrarLibroServlet", value = "/registroLibro")
-public class RegistrarLibroServlet extends HttpServlet {
+@WebServlet(name = "registrarTareaServlet", value = "/registroTarea")
+public class RegistrarTareaServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         try {
@@ -28,7 +28,7 @@ public class RegistrarLibroServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //La respuesta que le vamos a devolver, va a ser la dirección del archivo JSP registroUsuario.jsp
-        RequestDispatcher respuesta = req.getRequestDispatcher("/registroLibro.jsp");
+        RequestDispatcher respuesta = req.getRequestDispatcher("/registroTarea.jsp");
         //envía la respuesta
         respuesta.forward(req,resp);
     }

@@ -1,7 +1,6 @@
-package com.gestion.gestionlibros.model.data.dao;
+package com.gestion.gestiontareas.model.data.dao;
 
-import com.gestion.gestionlibros.model.Libro;
-import com.gestion.gestionlibros.model.Tarea;
+import com.gestion.gestiontareas.model.Tarea;
 import org.jooq.*;
 import org.jooq.Record;
 import org.jooq.impl.DSL;
@@ -12,7 +11,7 @@ import java.util.List;
 import static org.jooq.impl.DSL.*;
 import static org.jooq.impl.SQLDataType.VARCHAR;
 
-public class LibroDAO {
+public class TareaDAO {
     public static void agregarTarea(DSLContext query, Tarea tarea){
         Table tablaTarea= table(name("Tareas"));
         Field[] columnas = tablaTarea.fields("nombre","descripcion","tipo","hora","dia","mes","año");
@@ -24,22 +23,22 @@ public class LibroDAO {
         query.update(DSL.table("Tareas")).set(DSL.field(columnaTabla),dato).
                 where(DSL.field("nombre").eq(nombre)).execute();
     }
-    public static List obtenerLibro(DSLContext query, String columnaTabla, Object dato){
-        Result resultados = query.select().from(DSL.table("Libros")).where(DSL.field(columnaTabla).eq(dato)).fetch();
-        return obtenerListaLibros(resultados);
+    public static List obtenerTarea(DSLContext query, String columnaTabla, Object dato){
+        Result resultados = query.select().from(DSL.table("Tareas")).where(DSL.field(columnaTabla).eq(dato)).fetch();
+        return obtenerListaTareas(resultados);
     }
-    public static List<Libro> obtenerLibros(DSLContext query) {
-        Result<Record> resultados = query.select().from(DSL.table("Libros")).fetch();
+    public static List<Tarea> obtenerTareas(DSLContext query) {
+        Result<Record> resultados = query.select().from(DSL.table("Tareas")).fetch();
 
-        return obtenerListaLibros(resultados);
+        return obtenerListaTareas(resultados);
     }
-    public static boolean eliminarLibro(DSLContext query, Libro libro) {
-        String nombreLibro=libro.getNombre();
+    public static boolean eliminarTarea(DSLContext query, Tarea tarea) {
+        String nombreTarea=tarea.getNombre();
         int result=0;
         try{
             result=query.deleteFrom(
-                            DSL.table("Libros"))
-                    .where(DSL.field("nombre").eq(nombreLibro))
+                            DSL.table("Tareas"))
+                    .where(DSL.field("nombre").eq(nombreTarea))
                     .execute();
         }catch (Exception e){
             System.out.println(e);

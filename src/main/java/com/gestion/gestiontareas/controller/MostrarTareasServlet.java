@@ -1,9 +1,9 @@
-package com.gestion.gestionlibros.controller;
+package com.gestion.gestiontareas.controller;
 
 
-import com.gestion.gestionlibros.model.Tarea;
-import com.gestion.gestionlibros.model.data.DBGenerator;
-import com.gestion.gestionlibros.model.data.dao.TareaDAO;
+import com.gestion.gestiontareas.model.Tarea;
+import com.gestion.gestiontareas.model.data.DBGenerator;
+import com.gestion.gestiontareas.model.data.dao.TareaDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -15,12 +15,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "MostrarLibrosServlet", value = "/mostrarLibros")
-public class MostrarLibrosServlet extends HttpServlet {
+@WebServlet(name = "MostrarTareasServlet", value = "/mostrarTareas")
+public class MostrarTareasServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         try {
-            DBGenerator.iniciarBD("LibrosDB");
+            DBGenerator.iniciarBD("TareasDB");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -28,17 +28,17 @@ public class MostrarLibrosServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            req.setAttribute("libros",agregarLibrosEjemplo());
+            req.setAttribute("tareas",agregarTareasEjemplo());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        RequestDispatcher respuesta = req.getRequestDispatcher("/mostrarLibros.jsp");
+        RequestDispatcher respuesta = req.getRequestDispatcher("/mostrarTareas.jsp");
         respuesta.forward(req,resp);
     }
 
-    private List agregarLibrosEjemplo() throws ClassNotFoundException {
-        List<Tarea> libros = new ArrayList<>();
-        libros = TareaDAO.obtenerTareas(DBGenerator.conectarBD("LibrosDB"));
-        return libros;
+    private List agregarTareasEjemplo() throws ClassNotFoundException {
+        List<Tarea> tareas = new ArrayList<>();
+        tareas = TareaDAO.obtenerTareas(DBGenerator.conectarBD("TareasDB"));
+        return tareas;
     }
 }
