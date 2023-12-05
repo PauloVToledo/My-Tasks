@@ -1,8 +1,9 @@
 package com.example.my_tasks.modelo.datos.DAO;
+
 import com.example.my_tasks.modelo.Tarea;
 import org.jooq.*;
-import org.jooq.impl.DSL;
 import org.jooq.Record;
+import org.jooq.impl.DSL;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +13,7 @@ import static org.jooq.impl.SQLDataType.VARCHAR;
 
 public class TareaDAO {
     public static void agregarTarea(DSLContext query, Tarea tarea){
-        Table tablaTarea= table(name("Tarea"));
+        Table tablaTarea= table(name("Tareas"));
         Field[] columnas = tablaTarea.fields("nombre","descripcion","tipo","hora","dia","mes","año");
         query.insertInto(tablaTarea, columnas[0], columnas[1],columnas[2],columnas[3],columnas[4],columnas[5],columnas[6])
                 .values(tarea.getNombre(),tarea.getDescripcion(),tarea.getTipo(),tarea.getHora(),tarea.getDia(),tarea.getMes(),tarea.getAño())
@@ -31,19 +32,18 @@ public class TareaDAO {
 
         return obtenerListaTareas(resultados);
     }
-
-    public static boolean verificarExistenciaTarea(DSLContext query, String nombre) {
-        Result<Record1<Integer>> result = query.selectCount()
-                .from(DSL.table("Tareas"))
-                .where(DSL.field("nombre").eq(nombre))
-                .fetch();
-
-        return result.isNotEmpty();
-    }
-
-    public static void eliminarTarea(DSLContext query, String nombre){
-        Table tablaEstudiante= table(name("Tareas"));
-        query.delete(DSL.table("Tareas")).where(DSL.field("nombre").eq(nombre)).execute();
+    public static boolean eliminarTarea(DSLContext query, Tarea tarea) {
+        String nombreTarea=tarea.getNombre();
+        int result=0;
+        try{
+            result=query.deleteFrom(
+                            DSL.table("Tareas"))
+                    .where(DSL.field("nombre").eq(nombreTarea))
+                    .execute();
+        }catch (Exception e){
+            System.out.println(e);
+        }
+        return result==1;
     }
     private static List<Tarea> obtenerListaTareas(Result<Record> resultados) {
         List<Tarea> tareas = new ArrayList<>();

@@ -1,28 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Página Principal</title>
-    <link rel="stylesheet" type="text/css" href="estiloIndex.css">
-
-    <style>
-        body {
-            background-image: url('menu.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <title>Menu</title>
 </head>
 <body>
-<h1>My</h1><h2>Tasks</h2>
-<h3>Tareas Dinámicas</h3>
-
-<form action="ServletControlador" method="post">
-    <button type="submit" name="action" value="verCalendario">Ver mi Calendario</button>
-    <button type="submit" name="action" value="agregarTarea">Agregar Tarea</button>
-    <button type="submit" name="action" value="eliminarTarea">Eliminar Tarea</button>
+<h1 class="encabezado"> Menú principal libros </h1>
+<br>
+<form action="registroTarea" method="get">
+    <div class="centrado">
+        <input type="submit" value="Registrar tarea" class="boton">
+    </div>
+</form>
+<br>
+<form action="mostrarTareas" method="get">
+    <div class="centrado">
+        <input type="submit" value="Mostrar tareas" class="boton">
+    </div>
+</form>
+<br>
+<form action="eliminarTarea" method="get">
+    <div class="centrado">
+        <input type="submit" value="Eliminar tarea" class="boton">
+    </div>
 </form>
 </body>
 </html>

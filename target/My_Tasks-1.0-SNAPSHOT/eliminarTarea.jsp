@@ -1,37 +1,30 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Eliminar Tarea</title>
-    <link rel="stylesheet" type="text/css" href="eliminarTarea.css">
-    <!-- Puedes agregar enlaces a archivos CSS u otros recursos aquí -->
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <title>Eliminar tarea</title>
 </head>
 <body>
-<h1>Eliminar Tarea</h1>
-
-<!-- Lista de tareas con botones de eliminación -->
-<ul>
-    <li>
-        <span>Nombre de la Tarea 1</span>
-        <button onclick="eliminarTarea('id_tarea_1')">Eliminar</button>
-    </li>
-    <li>
-        <span>Nombre de la Tarea 2</span>
-        <button onclick="eliminarTarea('id_tarea_2')">Eliminar</button>
-    </li>
-    <!-- Agrega más elementos de la lista según sea necesario -->
-</ul>
-
-<script>
-    function eliminarTarea(idTarea) {
-        alert('Tarea con ID ' + idTarea + ' eliminada.');
-    }
-</script>
-
-<br>
-
-<a href="index.jsp">Volver a la Página Principal</a>
-
+<h1 class="encabezado"> Eliminar tarea</h1>
+<form action="eliminarTarea" method="post">
+    <div class="centrado">
+        <label> Nombre:</label>
+        <input name="nombre" type="text" class="campoTexto">
+        <label> Tipo:</label>
+        <input name="tipo" type="text" class="campoTexto">
+        <label> Descripcion:</label>
+        <input name="descripcion" type="text" class="campoTexto">
+        <label> Hora:</label>
+        <input name="hora" type="number" class="campoTexto">
+        <label> Dia:</label>
+        <input name="dia" type="text" class="campoTexto">
+        <label> Mes:</label>
+        <input name="mes" type="text" class="campoTexto">
+        <label> Año:</label>
+        <input name="año" type="number" class="campoTexto">
+        <br><br>
+        <input type="submit" value="Eliminar" class="boton">
+    </div>
+</form>
 </body>
 </html>
