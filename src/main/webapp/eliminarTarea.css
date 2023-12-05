@@ -6,17 +6,23 @@ body {
 }
 
 h1, h2 {
-    /* Estilos para los títulos */
+    font-size: 24px; /* Establece el mismo tamaño de fuente para h1 y h2 */
+    margin-top: 20px;
     text-align: center;
-    font-size: 4em; /* Tamaño de la fuente mucho más grande (ajusta según tus necesidades) */
 }
 
-h1{
+h1 {
     color: blue; /* Color azul para h1 */
 }
 
 h2 {
     color: green; /* Color verde para h2 */
+}
+
+/* Agrega un nuevo estilo para el texto rojo */
+.red-text {
+    color: red;
+    text-align: right;
 }
 
 ul {
@@ -33,12 +39,6 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-input[type="text"] {
-    flex: 1;
-    margin-right: 10px;
-    max-width: 200px;
 }
 
 button {
