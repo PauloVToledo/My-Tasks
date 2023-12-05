@@ -19,10 +19,17 @@ public class TareaDAO {
                 .values(tarea.getNombre(),tarea.getDescripcion(),tarea.getTipo(),tarea.getHora(),tarea.getDia(),tarea.getMes(),tarea.getAño())
                 .execute();
     }
-    public static void modificarTarea(DSLContext query, String nombre, String columnaTabla, Object dato){
-        query.update(DSL.table("Tareas")).set(DSL.field(columnaTabla),dato).
-                where(DSL.field("nombre").eq(nombre)).execute();
+    public static boolean modificarTarea(DSLContext query, String nombre, String columnaTabla, Object dato) {
+        int filasModificadas = query
+                .update(DSL.table("Tareas"))
+                .set(DSL.field(columnaTabla), dato)
+                .where(DSL.field("nombre").eq(nombre))
+                .execute();
+
+
+        return filasModificadas > 0;
     }
+
     public static List obtenerTarea(DSLContext query, String columnaTabla, Object dato){
         Result resultados = query.select().from(DSL.table("Tareas")).where(DSL.field(columnaTabla).eq(dato)).fetch();
         return obtenerListaTareas(resultados);

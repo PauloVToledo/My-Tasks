@@ -3,10 +3,10 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="estilos.css">
-    <title>Eliminar tarea</title>
+    <title>Eliminar Tarea</title>
 </head>
 <body>
-<h1 class="encabezado"> Eliminar tarea</h1>
+<h1 class="encabezado"> Eliminar Tarea</h1>
 <div class="centrado">
     <p class="subtitulo">Eliminacion exitosa</p> <br>
     <label class="campoTexto"> Nombre : <c:out value="${tarea.getNombre()}"></c:out> </label>

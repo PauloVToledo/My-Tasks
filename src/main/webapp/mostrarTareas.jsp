@@ -2,11 +2,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Mostrar tareas</title>
+    <title>Mostrar Tareas</title>
     <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
-<h1 class="encabezado">Tareas ingresadas</h1>
+<h1 class="encabezado">Tareas Ingresadas</h1>
 <div class="centrado">
     <table>
         <tr>

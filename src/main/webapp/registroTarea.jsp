@@ -2,10 +2,10 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="estilos.css">
-    <title>Registro libro</title>
+    <title>Registro Tarea</title>
 </head>
 <body>
-<h1 class="encabezado"> Registro libro</h1>
+<h1 class="encabezado"> Registro Tarea</h1>
 <form action="registroTarea" method="post">
     <div class="centrado">
         <label> Nombre:</label>

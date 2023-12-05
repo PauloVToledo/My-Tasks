@@ -1,11 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Eliminar libro</title>
+    <title>Eliminar Tarea</title>
     <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
-<h1 class="encabezado"> Eliminar tarea</h1>
+<h1 class="encabezado"> Eliminar Tarea</h1>
 <h2 class="subtitulo">Datos Incorrectos, favor comprobar nuevamente</h2>
 <form action="registroTarea" method="post">
     <div class="centrado">

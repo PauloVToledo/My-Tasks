@@ -1,11 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Registro libro</title>
+    <title>Registro Tarea</title>
     <link rel="stylesheet" type="text/css" href="estilos.css">
 </head>
 <body>
-<h1 class="encabezado"> Registro libro</h1>
+<h1 class="encabezado"> Registro Tarea</h1>
 <h2 class="subtitulo">Datos Incorrectos, favor comprobar nuevamente</h2>
 <form action="registroTarea" method="post">
     <div class="centrado">
